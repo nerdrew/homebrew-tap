@@ -3,7 +3,8 @@ require 'date'
 
 class RustNightly < Formula
   homepage 'http://www.rust-lang.org/'
-  head 'http://static.rust-lang.org/dist/rust-nightly-x86_64-apple-darwin.tar.gz'
+  url 'http://static.rust-lang.org/dist/rust-nightly-x86_64-apple-darwin.tar.gz'
+  version Date.today.to_s
 
   conflicts_with 'rust', :because => 'same'
 

@@ -1,8 +1,10 @@
-require "formula"
+require 'formula'
+require 'date'
 
 class CargoNightly < Formula
-  homepage "http://http://crates.io/"
-  head 'http://static.rust-lang.org/cargo-dist/cargo-nightly-x86_64-apple-darwin.tar.gz'
+  homepage "http://crates.io/"
+  url 'http://static.rust-lang.org/cargo-dist/cargo-nightly-x86_64-apple-darwin.tar.gz'
+  version Date.today.to_s
 
   depends_on 'rust-nightly'
 
