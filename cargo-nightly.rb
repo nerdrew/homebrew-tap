@@ -3,7 +3,7 @@ require 'date'
 
 class CargoNightly < Formula
   homepage "http://crates.io/"
-  url 'http://static.rust-lang.org/cargo-dist/cargo-nightly-x86_64-apple-darwin.tar.gz'
+  url 'https://static.rust-lang.org/cargo-dist/cargo-nightly-x86_64-apple-darwin.tar.gz'
   version Date.today.to_s
 
   depends_on 'rust-nightly'
