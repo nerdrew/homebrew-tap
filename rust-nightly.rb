@@ -1,9 +1,8 @@
 require 'formula'
-require 'date'
 
 class RustNightly < Formula
-  def self.latest_rust_nightly_revision
-    @latest_rust_nightly_revision ||= begin
+  def self.latest_revision
+    @latest_revision ||= begin
       Date.parse(`curl --silent --HEAD 'https://static.rust-lang.org/dist/rust-nightly-x86_64-apple-darwin.tar.gz' | grep 'Last-Modified:'`.split(' ', 2).last.strip).to_s
     end
   rescue => e
@@ -20,7 +19,7 @@ class RustNightly < Formula
 
   homepage 'http://www.rust-lang.org/'
   url 'https://static.rust-lang.org/dist/rust-nightly-x86_64-apple-darwin.tar.gz'
-  version latest_rust_nightly_revision
+  version latest_revision
   sha256 sha256_checksum
 
   conflicts_with 'rust', :because => 'same'
