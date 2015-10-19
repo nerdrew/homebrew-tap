@@ -23,7 +23,6 @@ class RustNightly < Formula
   sha256 sha256_checksum
 
   conflicts_with 'rust', :because => 'same'
-  conflicts_with 'rust-beta', :because => 'same'
 
   def install
     system "./install.sh", "--prefix=#{prefix}"
