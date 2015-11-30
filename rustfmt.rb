@@ -3,7 +3,7 @@ require "formula"
 class Rustfmt < Formula
   def self.latest_revision
     @latest_revision ||= begin
-      Date.parse(`curl --silent --HEAD 'https://api.github.com/repos/nrc/rustfmt/commits' | grep 'Last-Modified:'`.split(' ', 2).last.strip).to_s
+      Date.parse(`curl --silent --HEAD 'https://api.github.com/repos/rust-lang-nursery/rustfmt/commits' | grep 'Last-Modified:'`.split(' ', 2).last.strip).to_s
     end
   rescue => e
     warn "Could not curl Last-Modified: #{e.inspect} #{e.backtrace}"
