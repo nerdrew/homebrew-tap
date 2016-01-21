@@ -88,10 +88,13 @@ class Multirust < Formula
 
     if (( CURRENT == 1 )); then
       _describe -t commands "multirust subcommand" _commands
-      return
+      return 0
     elif (( CURRENT == 3)) && [[ "${words[1]}" == 'run' ]]; then
       _path_commands
-      return
+      return 0
+    elif (( CURRENT >= 4)) && [[ "${words[1]}" == 'run' ]]; then
+      _dispatch ${words[3]} ${words[3]} -default-
+      return 0
     fi
 
     case "${words[(CURRENT - 1)]}" in
