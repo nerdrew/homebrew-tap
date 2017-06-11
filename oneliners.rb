@@ -10,7 +10,6 @@ class Oneliners < Formula
   def install
     system "make", "install", "PREFIX=#{prefix}"
     zsh_completion.install "completion/cargo-open.zsh" => "_cargo-open"
-    zsh_completion.install "completion/git-find-reviewers.zsh" => "_git-find-reviewers"
-    zsh_completion.install "completion/git-fresh.zsh" => "_git-fresh"
+    zsh_completion.install "completion/git-oneliners.zsh" => "_git-oneliners"
   end
 end
