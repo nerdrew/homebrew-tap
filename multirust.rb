@@ -18,7 +18,7 @@ class Multirust < Formula
     sha256 "14310f6110a75f9888a2ddb16be8371b1ad72601a1486984fdeaf8a673bc2f4a" => :mavericks
   end
 
-  depends_on :gpg => [:recommended, :run]
+  depends_on "gnupg" => [:recommended, :run]
 
   conflicts_with "rust", :because => "both install rustc, rustdoc, cargo, rust-lldb, rust-gdb"
 
