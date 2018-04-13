@@ -23,7 +23,7 @@ class Multirust < Formula
   conflicts_with "rust", :because => "both install rustc, rustdoc, cargo, rust-lldb, rust-gdb"
 
   def caveats
-    <<-EOC.undent
+    <<~EOC
       multirust will install toolchains to ~/.multirust by default. Set $MULTIRUST_HOME to use something else.
     EOC
   end
@@ -43,7 +43,7 @@ class Multirust < Formula
     system "#{bin}/multirust", "show-default"
   end
 
-  ZSH_COMPLETION = <<-EOC.undent.freeze
+  ZSH_COMPLETION = <<~EOC.freeze
     #compdef multirust
 
     # ------------------------------------------------------------------------------
