@@ -44,7 +44,6 @@ class Protobuf < Formula
   option :cxx11
 
   option "without-python", "Build without python support"
-  depends_on :python => :recommended if MacOS.version <= :snow_leopard
 
   resource "six" do
     url "https://pypi.python.org/packages/source/s/six/six-1.9.0.tar.gz"
